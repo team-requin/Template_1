@@ -25,7 +25,7 @@ function login_check() {
 	return true;
 }
 
-$user = mysqli_fetch_array(mysqli_query(db(), "select * from `users` where user_id='".$id."' and user_pw='".md5($pw)."'"));
+$user = mysqli_fetch_array(mysqli_query($connect, "select * from `users` where user_id='".$id."' and user_pw='".md5($pw)."'"));
 if($user[0] == null) {
 	$user_lv = 0;
 } else {
