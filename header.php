@@ -1,7 +1,3 @@
-<?php
-$skin_dir = "skin";
-$img_dir = "imgs";
-?>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -45,6 +41,3 @@ $img_dir = "imgs";
             </div>
         </div>
     </div>
-<?php
-include('footer.php');
-?>

@@ -224,3 +224,9 @@ img {
 #info_cap span:last-child {
 	border-style: none;
 }
+
+/*!board_write*/
+
+#board_write {
+	height: 100%;
+}
