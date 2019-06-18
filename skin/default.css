@@ -245,19 +245,29 @@ img {
 #board_area form table {
 	display: flex;
 	height: 100%;
-	widows: 100%;
+	width: 100%;
 }
 #board_area form table tbody {
 	width: 100%;
+	border: 5px solid red;
+}
+tbody tr {
+	border: 3px solid blue;
+	height: 100%;
+	width: 100%;
 }
 #board_area form table tbody tr th{
-	width: 50%;
-	height: 50px;
-	border: 1px solid #ffff00;
-	background-color: #ebebeb;
+    width: 100px;
+    padding: 10px 13px;
+    border: 1px solid #c4c4c4;
+    background: #ebebeb;
+    color: #383838;
+    text-align: left;
+    font-size: 1.083em;
 }
-#board_area form table tbody tr td{
-	border: 1px solid #ffff00;
+#board_area form table tbody tr td input{
+	/* width: 1000px; */
+	border: 1px solid red;
 }
 #board_area form table tbody tr td input {
 	width: 70%;
