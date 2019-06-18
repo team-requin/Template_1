@@ -1,5 +1,6 @@
 <?php
 session_start();
+error_reporting(0);
 echo "<meta charset=\"UTF-8\">";
 
 //Connect database
