@@ -98,27 +98,23 @@ img {
 #header_menu ul div ul {
 	/* display: block; */
 	display: none;
-
-	/* top: 100%; */
 	z-index: -1;
 	position: absolute;
 	width: 10vw;
 	height: auto;
 	box-shadow: 2px 2px 5px #000000;
 	background-color: #3e3c52;
-	transition: 10s;
 	animation-name: header_list;
-	animation-duration: 0.2s;
+	animation-duration: 0.1s;
 	animation-fill-mode: forwards;
 }
+
 @keyframes header_list {
 	from {
 		margin-top: 0;
-		height: 0;
 	}
 	to {
-		margin-top: 10px;
-		display: block;
+		margin-top: 1%;
 	}
 }
 
@@ -126,7 +122,8 @@ img {
 	display: block;
 }
 #header_menu ul div ul a li{
-	padding: 10px;
+	padding: 5%;
+	margin-top: 5%;
 	color: #ffffff;
 }
 #header_menu ul div ul li:hover{
