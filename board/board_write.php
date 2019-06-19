@@ -1,7 +1,7 @@
 <?php
 $skin_dir = "../skin";
 $img_dir = "../imgs";
-include('../header.php');
+include('header.php');
 ?>
     <div id="board_write">
         <form id="board_frame">
@@ -25,5 +25,5 @@ include('../header.php');
     </div>
     <!--옵션 제목 내용 링크-->
 <?php
-include('../footer.php');
+include('footer.php');
 ?>
