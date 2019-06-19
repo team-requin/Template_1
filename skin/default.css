@@ -16,6 +16,9 @@ img {
 ::-webkit-scrollbar-thumb {
     background-color: #FF1B00;
 }
+
+/*!header , only_header*/
+
 #header {
 	margin: 0;
 	padding: 0;
@@ -93,14 +96,32 @@ img {
 	transform: translate(0%, -50%);
 }
 #header_menu ul div ul {
+	/* display: block; */
 	display: none;
+
+	/* top: 100%; */
+	z-index: -1;
 	position: absolute;
 	width: 10vw;
 	height: auto;
-	top: 100%;
 	box-shadow: 2px 2px 5px #000000;
 	background-color: #3e3c52;
+	transition: 10s;
+	animation-name: header_list;
+	animation-duration: 0.2s;
+	animation-fill-mode: forwards;
 }
+@keyframes header_list {
+	from {
+		margin-top: 0;
+		height: 0;
+	}
+	to {
+		margin-top: 10px;
+		display: block;
+	}
+}
+
 #header_menu ul div:hover ul {
 	display: block;
 }
