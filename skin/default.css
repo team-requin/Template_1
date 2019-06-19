@@ -242,21 +242,24 @@ img {
 	height: 70%;
 	border: 1px solid green;
 }
-#board_area form table {
+#board_area form {
+	width: 100%;
+}
+#table_div table {
 	display: flex;
 	height: 100%;
 	width: 100%;
 }
-#board_area form table tbody {
+#table_div table tbody {
 	width: 100%;
 	border: 5px solid red;
 }
-tbody tr {
+#table_div table tbody tr {
 	border: 3px solid blue;
 	height: 100%;
 	width: 100%;
 }
-#board_area form table tbody tr th{
+#table_div table tbody tr th{
     width: 100px;
     padding: 10px 13px;
     border: 1px solid #c4c4c4;
@@ -265,14 +268,14 @@ tbody tr {
     text-align: left;
     font-size: 1.083em;
 }
-#board_area form table tbody tr td input{
-	/* width: 1000px; */
-	border: 1px solid red;
+#table_div table tbody tr td{
+	border: 2px solid green;
 }
-#board_area form table tbody tr td input {
+#table_div table tbody tr td input{
+	border: 1px solid red;
 	width: 70%;
 }
-#board_title {
+/* #board_title {
 	border: 1px solid red;
 }
 #board_title input {
@@ -290,6 +293,6 @@ tbody tr {
 	height: 10%;
 	text-align: end;
 	border: 1px solid gray;
-}
+} */
 
 
