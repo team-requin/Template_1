@@ -101,15 +101,15 @@ img {
 	box-shadow: 2px 2px 5px #000000;
 	background-color: #3e3c52;
 }
+#header_menu ul div:hover ul {
+	display: block;
+}
 #header_menu ul div ul a li{
 	padding: 10px;
 	color: #ffffff;
 }
 #header_menu ul div ul li:hover{
 	background-color: #313042;
-}
-#header_menu ul div:hover ul {
-	display: block;
 }
 #header_text {
 	text-align: center;
