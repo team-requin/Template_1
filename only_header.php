@@ -20,7 +20,7 @@ include("common.php");
 			</div>
 		</div>
 		<div id="header_menu">
-			<img src="<?php echo $img_dir; ?>/title_logo.png" />
+			<a href="/"><img src="<?php echo $img_dir; ?>/title_logo.png" /></a>
 			<ul>
 				<div>
 					<a href="#"><span>커뮤니티</span></a>

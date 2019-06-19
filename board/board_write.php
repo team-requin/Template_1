@@ -1,7 +1,7 @@
 <?php
 $skin_dir = "../skin";
 $img_dir = "../imgs";
-include('../header.php');
+include('header.php');
 ?>
     <div id="board_write">
         <form id="board_frame">
@@ -28,5 +28,5 @@ include('../header.php');
         </form>
     </div>
 <?php
-include('../footer.php');
+include('footer.php');
 ?>
