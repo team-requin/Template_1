@@ -1,10 +1,10 @@
 <?php
 session_start();
-error_reporting(0);
+//error_reporting(0);
 echo "<meta charset=\"UTF-8\">";
 
 //Connect database
-$connect = mysqli_connect("localhost", "root", "dladydtjdtjd1", "template_1");
+$connect = mysqli_connect("10.156.147.149", "root", "dladydtjdtjd1", "template_1");
 mysqli_query($connect, "SET NAMES utf8");
 mysqli_query($connect, "set session character_set_connection=utf8");
 mysqli_query($connect, "set session character_set_results=utf8");
