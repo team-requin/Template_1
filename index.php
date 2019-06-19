@@ -1,7 +1,7 @@
 <?php
 $skin_dir = "skin";
 $img_dir = "imgs";
-include("only_header.php");
+include("index_header.php");
 ?>
 	<div id="index_container">
         <img src="imgs/background.jpg"alt="연습" id="banner">
