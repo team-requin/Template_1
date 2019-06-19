@@ -8,7 +8,6 @@
 	</style>
 </head>
 </body>
-
     <div id="header">
         <div id="only_header">
             <div>
