@@ -12,7 +12,7 @@
 				<div>
 					<a href="#"><span>커뮤니티</span></a>
 					<ul>
-						<a href="#"><li>공지사항</li></a>
+						<a href="/board/board.php?board=notice"><li>공지사항</li></a>
 						<a href="#"><li>자유 게시판</li></a>
 					</ul>
 				</div>
