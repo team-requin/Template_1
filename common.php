@@ -33,12 +33,17 @@ if($user[0] == null) {
 	$user_ip = $user['user_ip'];
 }
 
-//Test Alert Function
-function test($text) {
+//Alert Function
+function alert($text) {
 	if($text == null) {
 		echo "<script>alert('Test');</script>";
 		return;
 	}
 	echo "<script>alert('".$text."');</script>";
+}
+
+//Change Page Function
+function page($page) {
+	echo '<script>window.location.href="'.$page.'"</script>';
 }
 ?>
