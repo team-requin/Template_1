@@ -116,6 +116,9 @@ img {
 	transition: max-height 1s;
 	max-height: 300px;
 }
+#header_menu ul div ul a {
+	text-decoration: none;
+}
 #header_menu ul div ul a li{
 	padding: 7%;
 	color: #ffffff;
