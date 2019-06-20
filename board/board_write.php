@@ -6,7 +6,7 @@ include('header.php');
     <div id="board_write">
         <form id="board_frame">
             <table cellspacing="0" cellpadding="0" >
-                <tbody id="board_tbody">
+                <tbody id="board_write_tbody">
                     <tr>
                         <th>제목</th>
                         <td><input id="board_title"type="text" placeholder="제목을 입력해주세요"></td>

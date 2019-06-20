@@ -12,4 +12,5 @@
 		<?php
 		include("only_header.php");
 		?>
+		<div id="header_text">공지사항</div>
     </div>
