@@ -77,7 +77,6 @@ img {
 	width: 85%;
 }
 #header_menu ul div {
-	z-index: 2;
 	height: 100%;
 	width: 7vw;
 	cursor: pointer;
@@ -92,7 +91,9 @@ img {
 	text-align: center;
 	height: 100%;
 	width: 100%;
-	text-decoration: none;
+}
+#header_menu ul div a {
+	text-decoration: none;	
 }
 #header_menu ul div a span {
 	display: table-cell;
@@ -241,46 +242,76 @@ img {
 
 #board_write {
 	width: 100%;
-	height: 100%;
+	height: auto;
+	min-height: 80%;
 	display: flex;
 	justify-content: center;
-	border: 1px solid red;
+	background-color: #ffffff;
 }
 #board_frame {
 	width: 70%;
-	border: 1px solid blue;
+	height: 100%;
+	margin-top: 2%;
 }
 #board_frame table {
 	width: 100%;
+	height: 80%;
+	border-collapse: collapse;
+}
+#board_tbody {
 	height: 100%;
-	border: 1px solid gray;
 }
-#board_frame table tbody {
-	border: 1px solid green;
+#board_tbody tr td input, #board_tbody tr td textarea {
+	outline: none;
 }
-#board_frame table tbody tr {
-	border: 1px solid red;
+#board_tbody tr td {
+	padding: 0;
 }
-#board_frame table tbody tr:first-child {
+#board_tbody tr:first-child {
 	height: 10%;
-	border: 1px solid purple;
 }
-#board_frame table tbody tr:last-child {
+#board_tbody tr:first-child input {
+	margin-left: 5%;
+	font-size: 1rem;
+	padding: 10px;
+}
+#board_tbody tr:nth-child(2) td {
+	height: 80%;
+}
+#board_tbody tr:nth-child(2) td textarea {
+	min-width: 90%;
+	min-height: 450px;
+	resize: none;
+	font-size: 15px;
+	padding: 15px;
+	margin: 10px 5%;
+	box-sizing: border-box;
+	border: 1px solid #cecece;
+}
+#board_tbody tr:nth-child(3) td > input {
+	margin-left: 5%;
+	font-size: 1rem;
+	padding: 8px 10px;
+}
+#board_tbody tr:last-child {
 	height: 10%;
-	border: 1px solid black;
+}
+#board_tbody tr:last-child input {
+	margin-left: 5%;
+	padding: 10px;
 }
 #board_tbody tr th{
     width: 100px;
     padding: 10px 13px;
-    border: 1px solid red; /*#c4c4c4;*/
+    border: 1px solid #cfcfcf; /*#c4c4c4;*/
     background: #ebebeb;
     color: #383838;
     text-align: left;
-    font-size: 1.083em;
+    font-size: 0.8em;
 }
 #board_tbody tr td{
-	padding: 0;
-	border: 2px solid green;
+	padding: 10px 0;
+	border: 1px solid #cfcfcf;
 }
 #board_title {
 	padding-left: 20px;
@@ -288,40 +319,35 @@ img {
 	height: 50%;
 	width: 70%;
 }
-
 #board_link {
 	font-size: 20px;
-	padding: 0 20px;
-	margin-right: 20px;
+	margin-right: 10px;
 	height: 40%;
 	width: 50%
 }
-
-/*
-
-
-#table_div table tbody tr td input{
-	border: 1px solid red;
-	width: 70%;
+#board_button {
+	padding: 20px; 
+	text-align: center;
 }
-#board_title {
-	border: 1px solid red;
+#board_button button {
+	width: 80px;
+	height: 40px;
+	background-color: #ffffff;
+	border: 1px solid #3c95d5;
+	border-radius: 5px;
+	cursor: pointer;
+	outline: none;
 }
-#board_title input {
-	width: 50%;
+#board_button button:first-child {
+	background: #3c95d5;
+	color: #ffffff;
 }
-#board_input {
-	height: 70%;
-	border: 1px solid blue;
+#board_button button:first-child:hover {
+	background-color: #0071c2;
 }
-#board_input td input {
-	width: 100%;
-	height: 100%;
+#board_button button:last-child {
+	color: #0071c2;
 }
-#board_option {
-	height: 10%;
-	text-align: end;
-	border: 1px solid gray;
-} */
-
-
+#board_button button:last-child:hover {
+	background-color: #00a5ca;
+}
