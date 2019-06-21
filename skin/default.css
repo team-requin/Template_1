@@ -133,7 +133,7 @@ li, ul, ol {
 }
 #header_text {
 	text-align: center;
-	padding-top: 150px;
+	padding-top: 10%;
 	font-size: 30px;
 	font-weight: bold;
 }
@@ -460,6 +460,7 @@ li, ul, ol {
 
 #bo_v_container {
 	width: 100%;
+	min-height: 50vh;
 	display: flex;
 	justify-content: center;
 	background-color: #ffffff;
