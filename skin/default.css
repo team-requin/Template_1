@@ -284,7 +284,9 @@ li, ul, ol {
 	padding: 10px;
 }
 #board_write_tbody tr:nth-child(2) td {
+	padding: 10px;
 	height: 80%;
+	text-align: center;
 }
 #board_write_tbody tr:nth-child(2) td textarea {
 	min-width: 90%;
