@@ -7,9 +7,3 @@ function header_btn_mypage() {
 function header_btn_lgout() {
     alert('clicked3');
 }
-window.onload = () =>{
-    let el = document.getElementsByClassName('list_title');
-    el[0].addEventListener('click', () => {
-        location.href = "/board/board_write.php";
-    });
-}
