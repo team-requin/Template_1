@@ -5,7 +5,7 @@ include('header.php');
 ?>
     <div id="board_write">
         <form id="board_frame">
-            <table cellspacing="0" cellpadding="0" >
+            <table cellspacing="0" cellpadding="0">
                 <tbody id="board_write_tbody">
                     <tr>
                         <th>제목</th>
