@@ -16,5 +16,6 @@
             <span><strong>TEL</strong> XXX-XXXX-XXXX</span>
         </div>
     </div>
+    <script type="text/javascript" src="/js/index.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 	<div id="only_header">
 		<div>
 			<div id="header_button">
-				<a href="#"><button>로그인</button></a>
+				<a><button id="lg_btn">로그인</button></a>
 				<a href="#"><button>마이페이지</button></a>
 				<a href="#"><button>로그아웃</button></a>
 			</div>
@@ -10,7 +10,7 @@
 			<a href="/"><img src="<?php echo $img_dir; ?>/title_logo.png" /></a>
 			<ul>
 				<div>
-					<a href="#"><span>커뮤니티</span></a>
+					<a href="#"><span class="comunite">커뮤니티</span></a>
 					<ul>
 						<a href="/board/board.php?board=notice"><li>공지사항</li></a>
 						<a class="abc" href="#"><li>자유 게시판</li></a>

@@ -14,6 +14,7 @@ li, ul, ol {
 	padding: 0;
 	list-style: none;
 }
+
 ::-webkit-scrollbar{
     width: 15px;
 	background-color: #FFFFFF;
@@ -98,7 +99,7 @@ li, ul, ol {
 	width: 100%;
 }
 #header_menu ul div a {
-	text-decoration: none;	
+	text-decoration: none;
 }
 #header_menu ul div a span {
 	display: table-cell;
@@ -132,10 +133,16 @@ li, ul, ol {
 	background-color: #313042;
 }
 #header_text {
-	text-align: center;
-	padding-top: 10%;
+	position: absolute;
+	top: 22.5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	font-size: 30px;
 	font-weight: bold;
+}
+#header_text a {
+	text-decoration: none;
+	color: #000000;
 }
 
 /*!index*/
@@ -652,4 +659,135 @@ li, ul, ol {
 	font-size: 0.75em;
 	min-height: 50px;
 	border-bottom: 1px solid #ccc;
+}
+
+/*!sinup*/
+#siin_container {
+	padding: 50px 0;
+    height: 500px;
+	width: 700px;
+	margin: 0 auto;
+}
+#siin_frm {
+	width: 600px;
+	height: 400px;
+    margin: 0 auto;
+	padding-bottom: 30px;
+}
+.login_form {
+	height: 400px;
+	clear: both;
+	border: 1px;
+	border-radius: 15px;
+}
+.id_area, .pw_area {
+	height: 150px;
+	position: relative;
+}
+.input_row{
+	position: relative;
+	height: 100%;
+	padding: 10px 20px;
+	background: #fff;
+	border-radius: 10px 10px 0 0;
+}
+.lbl {
+	font-weight: bold;
+	font-size: 22px;
+}
+.int {
+	font-size: 20px;
+    line-height: 16px;
+    position: relative;
+    width: 100%;
+	height: 50px;
+	padding: 10px;
+	margin-top: 30px; 
+    color: #000;
+	border: none;
+	background: #fff;
+	border: 1px solid #4b3f5f;
+}
+#siin_btn {
+	width: 600px;
+	height: 60px;
+	margin-top: 40px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #4c8796;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	border-radius: 0 0 10px 10px;
+}
+#gosignup {
+	width: 60px;
+	margin: 5px auto;
+}
+#gosignup a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #000;
+	font-size: 15px;
+}
+
+/*!sinup*/
+#siup_container {
+	padding: 50px 0;
+    height: 750px;
+	width: 700px;
+	margin: 0 auto;
+}
+#siup_frm {
+	width: 600px;
+	height: 400px;
+    margin: 0 auto;
+	padding-bottom: 30px;
+}
+.login_form {
+	height: 400px;
+	clear: both;
+	border: 1px;
+	border-radius: 15px;
+}
+.id_area, .pw_area, .name_area {
+	height: 150px;
+	position: relative;
+}
+.input_row{
+	position: relative;
+	height: 100%;
+	padding: 10px 20px;
+	background: #fff;
+	border-radius: 10px 10px 0 0;
+}
+.lbl {
+	font-weight: bold;
+	font-size: 22px;
+}
+.int2 {
+	font-size: 20px;
+    line-height: 16px;
+    position: relative;
+    width: 100%;
+	height: 50px;
+	padding: 10px;
+	margin-top: 30px;
+    color: #000;
+	border: 1px solid #4b3f5f;
+    background: #fff;
+}
+#siup_btn {
+	width: 600px;
+	height: 60px;
+	margin-top: 40px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #4c8796;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	border-radius: 0 0 10px 10px;
 }
