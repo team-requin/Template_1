@@ -6,6 +6,9 @@ if(!$result[0]) {
 	alert("존재하지 않는 게시판입니다");
 	page("/");
 }
+$result = mysqli_query($connect, "select * from board_".$board);
+$count = mysqli_num_rows($result);
+$i = $count;
 ?>
 	<div id="board_list">
 		<div id="board_list_frame">
@@ -19,17 +22,24 @@ if(!$result[0]) {
 					</tr>
 				</thead>
 				<tbody>
+					<?php while($row = mysqli_fetch_array($result)) { ?>
 					<tr>
-						<td class="list_num">1</td>
-						<td class="list_title">2</td>
-						<td class="list_writer">3</td>
-						<td class="list_date">4</td>
+						<td class="list_num"><?= $i ?></td>
+						<td class="list_title"><?= $row['bo_title'] ?></td>
+						<td class="list_writer"><?= $row['bo_writer'] ?></td>
+						<td class="list_date"><?= $row['bo_date'] ?></td>
 					</tr>
+					<?php
+					$i--;
+					}
+					?>
 				</tbody>
 			</table>
-			<!-- <div id="board_list_nolist">
+			<?php if($count == 0) { ?>
+			<div id="board_list_nolist">
 				<p>게시물이 존재하지 않습니다.</p>
-			</div> -->
+			</div>
+			<?php } ?>
 			<script>
 				
 			</script>
