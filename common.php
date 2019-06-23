@@ -3,6 +3,11 @@ session_start();
 //error_reporting(0);
 echo "<meta charset=\"UTF-8\">";
 
+/*/////////////////////////////
+사이트 설정관한 모든것이 있는 파일입니다.
+/////////////////////////////*/
+$site_title = "Teamplate";
+
 //Connect database
 $connect = mysqli_connect("localhost", "root", "dladydtjdtjd1", "template_1");
 mysqli_query($connect, "SET NAMES utf8");
