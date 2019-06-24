@@ -441,6 +441,10 @@ li, ul, ol {
 	color: #666;
 	border: 1px solid #c4c4c4;
 }
+#board_list_table tbody tr td a {
+	text-decoration: none;
+	color: #000000;
+}
 #board_list_button {
 	text-align: end;
 	padding: 2% 0;

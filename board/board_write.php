@@ -6,8 +6,7 @@ include('header.php');
 
 if(!login_check()) {
 	alert("로그인부터 해주세요");
-	//page("/");
-	//exit();
+	page("/");
 }
 
 $result = mysqli_fetch_array(mysqli_query($connect, "select * from board where board='".$_GET['board']."'"));
@@ -22,10 +21,10 @@ $link = $_POST['link'];
 $secret = $_POST['hide'];
 $date = date("Y-m-d H:i:s");
 if($title != null && $text != null) {
+	if(!$secret) $secret = "on";
 	$result = mysqli_fetch_array(mysqli_query($connect, "select bo_id from board_".$_GET['board']." order by `bo_id` DESC"));
 	$count = $result[0] + 1;
-	alert($count);
-	$sql = "INSERT INTO board_notice VALUES (".$count.", '".$title."', '".$user_name."', '".$date."', '".$text."', '".$secret."')";
+	$sql = "INSERT INTO board_notice VALUES (".$count.", '".$title."', '".$user_name."', '".$date."', '".$text."', '".$link."', '".$secret."')";
 	mysqli_query($connect, $sql);
 	alert("글이 등록 되었습니다");
 	page("board.php?board=".$_GET['board']."&bo_id=".$count);
