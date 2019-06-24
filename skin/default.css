@@ -146,6 +146,7 @@ li, ul, ol {
 }
 #innerDate {
 	position: absolute;
+	display: inline-block;
 }
 
 /*!index*/

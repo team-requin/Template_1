@@ -18,14 +18,38 @@
 		<div id="header_text"><a href="/"><?= $title ?></a></div>
 	</div>
 	<script>
-		function autoRefresh_sample_div() {
-			var currentLocation = window.location;
-			$("#innerDate").load(currentLocation + ' #innerDate');
-
-			let now = new Date();
-			// document.getElementById('innerDate').innerHTML = "Hello";
+		function autoRefresh_innerDate_div() {
+			var d = new Date();
+			var currentDate = d.getFullYear() + "-"
+			+ ( d.getMonth() + 1 ) + "-"
+			+ d.getDate() + ", ";
+			var currentTime =
+			d.getHours() + ": "
+			+ pad(d.getMinutes(), 2) + ": "
+			// + d.getMinutes() + ": "
+			+ d.getSeconds();
+			var result = document.getElementById("innerDate");
+			result.innerHTML = currentDate + currentTime;
 		}
+
 		setInterval(() => {
-			autoRefresh_sample_div();
-		}, 1000);
+			autoRefresh_innerDate_div();
+		}, 500);
+		
+		function pad(n, width) {
+			n = n + '';
+			return n.length >= width ? n
+			:new Array(width - n.length + 1).join('0') + n;
+		}
+
+		// function autoRefresh_sample_div() {
+		// 	var currentLocation = window.location;
+		// 	$("#innerDate").load(currentLocation + ' #innerDate');
+
+		// 	let now = new Date();
+		// 	// document.getElementById('innerDate').innerHTML = "Hello";
+		// }
+		// setInterval(() => {
+		// 	autoRefresh_sample_div();
+		// }, 1000);
 	</script>
