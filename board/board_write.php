@@ -6,7 +6,7 @@ include('header.php');
 
 if(!login_check()) {
 	alert("로그인부터 해주세요");
-	page("/");
+	//page("/");
 	//exit();
 }
 
