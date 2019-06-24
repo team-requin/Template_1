@@ -5,7 +5,9 @@ $title = strtoupper($_GET['board']);
 include('header.php');
 
 if(!login_check()) {
-	exit();
+	alert("로그인부터 해주세요");
+	page("/");
+	//exit();
 }
 
 $title = $_POST['title'];
