@@ -22,10 +22,10 @@
 			var d = new Date();
 			var currentDate = d.getFullYear() + "-"
 			+ ( d.getMonth() + 1 ) + "-"
-			+ d.getDate() + ", ";
+			+ d.getDate() + " ";
 			var currentTime =
-			d.getHours() + ": "
-			+ pad(d.getMinutes(), 2) + ": "
+			d.getHours() + ":"
+			+ pad(d.getMinutes(), 2) + ":"
 			// + d.getMinutes() + ": "
 			+ d.getSeconds();
 			var result = document.getElementById("innerDate");
