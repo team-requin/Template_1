@@ -8,6 +8,9 @@ echo "<meta charset=\"UTF-8\">";
 /////////////////////////////*/
 $site_title = "Teamplate";
 
+//Site Path
+$_PATH_ = "/";
+
 //Connect database
 $connect = mysqli_connect("localhost", "root", "dladydtjdtjd1", "template_1");
 mysqli_query($connect, "SET NAMES utf8");
@@ -41,7 +44,7 @@ if($user[0] == null) {
 //Alert Function
 function alert($text) {
 	if($text == null) {
-		echo "<script>alert('Test');</script>";
+		echo "<script>alert('Null Value');</script>";
 		return;
 	}
 	echo "<script>alert('".$text."');</script>";
@@ -49,6 +52,6 @@ function alert($text) {
 
 //Change Page Function
 function page($page) {
-	echo '<script>window.location.href="'.$page.'"</script>';
+	echo("<script>location.replace('".$page."');</script>");
 }
 ?>

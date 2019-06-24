@@ -5,10 +5,10 @@ include("header.php");
 $result = mysqli_fetch_array(mysqli_query($connect, "select * from board where board='".$board."'"));
 if(!$result[0]) {
 	alert("존재하지 않는 게시판입니다");
-	page("/");
+	page($_PATH_);
 }
 
-$result = mysqli_query($connect, "select * from board_".$board);
+$result = mysqli_query($connect, "select * from board_".$board." order by `bo_id` DESC");
 $count = mysqli_num_rows($result);
 $i = $count;
 ?>
