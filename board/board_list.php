@@ -1,10 +1,10 @@
 <?php
-$result = mysqli_fetch_array(mysqli_query($connect, "select * from board where board_id='".$board."'"));
+$result = mysqli_fetch_array(mysqli_query($connect, "select * from board where board='".$board."'"));
 if(!$result[0]) {
 	alert("존재하지 않는 게시판입니다");
 	page("/");
 }
-$title = strtoupper($result['board_name']);
+$title = strtoupper($board);
 include("header.php");
 
 
@@ -29,7 +29,12 @@ $i = $count;
 						<td class="list_num"><?= $i ?></td>
 						<td class="list_title"><?= $row['bo_title'] ?></td>
 						<td class="list_writer"><?= $row['bo_writer'] ?></td>
-						<td class="list_date"><?= $row['bo_date'] ?></td>
+						<td class="list_date"><?php
+						$date = $row['bo_date'];
+						$date = split(" ", $date);
+						$date = $date[0];
+						echo $date;
+						?></td>
 					</tr>
 					<?php
 					$i--;
@@ -46,7 +51,7 @@ $i = $count;
 				
 			</script>
 			<div id="board_list_button">
-				<button>글쓰기</button>
+				<a href="board_write.php?board=<?= $board ?>"><button>글쓰기</button></a>
 			</div>
 		</div>
 	</div>

@@ -1,6 +1,7 @@
 <?php
 $skin_dir = "../skin";
 $img_dir = "../imgs";
+$title = strtoupper($_GET['board']);
 include('header.php');
 ?>
     <div id="board_write">
@@ -30,7 +31,7 @@ include('header.php');
 								try {
 									elClickedObj.form.submit();
 								} catch(e) {}
-								}
+							}
 							</script>
                         </td>
                     </tr>
@@ -43,7 +44,7 @@ include('header.php');
                     <tr>
                         <th>옵션</th>
                         <td>
-                            <input id="board_check" type="checkbox" value="board_check">
+                            <input id="board_check" type="checkbox" value="secret">
                             <label for="board_check">비공개</label>                        
                         </td>
                     </tr>
