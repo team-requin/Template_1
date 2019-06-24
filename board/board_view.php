@@ -1,20 +1,21 @@
 <?php
+$title = "게시글";
 include("header.php");
 
-$result = mysqli_fetch_array(mysqli_query($connect, "select * from board where board_id='".$board."'"));
+$result = mysqli_fetch_array(mysqli_query($connect, "select * from board_".$board." where bo_id=".$bo_id));
 if(!$result[0]) {
-	//alert("존재하지 않는 게시판입니다");
-	//page("/");
+	alert("존재하지 않는 게시판입니다");
+	page("/");
 }
 ?>
 <div id="bo_v_container">
 	<article id="bo_v">
-		<header><h1 id="bo_v_title">제목</h1></header>
+		<header><h1 id="bo_v_title"><?= $result['bo_title'] ?></h1></header>
 		<div id="bo_v_if">
 			<section id="bo_v_info">
-				작성자 <strong><span class="sv_member">작성자 이름</span></strong>
+				작성자 <strong><span class="sv_member"><?= $result['bo_writer'] ?></span></strong>
 				<span class="sound_only">작성일</span>
-				<strong>19-05-25 21:21</strong>
+				<strong><?= $result['bo_date'] ?></strong>
 				<span class="if_r">
 					댓글<strong>0건</strong>
 				</span>
@@ -34,10 +35,8 @@ if(!$result[0]) {
 		</div>
 
 		<section id="bo_v_atc">
-			<p id="bo_v_atc_title">안녕</p>
-			<div id="bo_v_img"></div>
 			<div id="bo_v_con">
-				<p></p>
+				<?= $result['bo_text'] ?>
 			</div>
 		</section>
 		

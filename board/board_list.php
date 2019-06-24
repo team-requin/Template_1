@@ -1,12 +1,12 @@
 <?php
+$title = strtoupper($board);
+include("header.php");
+
 $result = mysqli_fetch_array(mysqli_query($connect, "select * from board where board='".$board."'"));
 if(!$result[0]) {
 	alert("존재하지 않는 게시판입니다");
 	page("/");
 }
-$title = strtoupper($board);
-include("header.php");
-
 
 $result = mysqli_query($connect, "select * from board_".$board);
 $count = mysqli_num_rows($result);
@@ -27,7 +27,7 @@ $i = $count;
 					<?php while($row = mysqli_fetch_array($result)) { ?>
 					<tr>
 						<td class="list_num"><?= $i ?></td>
-						<td class="list_title"><?= $row['bo_title'] ?></td>
+						<td class="list_title"><a href="board.php?board=<?= $board ?>&bo_id=<?= $row['bo_id'] ?>"><?= $row['bo_title'] ?></a></td>
 						<td class="list_writer"><?= $row['bo_writer'] ?></td>
 						<td class="list_date"><?php
 						$date = $row['bo_date'];
