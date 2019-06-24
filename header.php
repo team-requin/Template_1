@@ -20,12 +20,9 @@
 	<script>
 		function autoRefresh_sample_div() {
 			var currentLocation = window.location;
-			$("#header").load(currentLocation + ' #header');
+			$("#innerDate").load(currentLocation + ' #innerDate');
 
 			let now = new Date();
-
-
-
 			// document.getElementById('innerDate').innerHTML = "Hello";
 		}
 		setInterval(() => {
