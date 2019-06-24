@@ -144,6 +144,9 @@ li, ul, ol {
 	text-decoration: none;
 	color: #000000;
 }
+#innerDate {
+	position: absolute;
+}
 
 /*!index*/
 #index_container {

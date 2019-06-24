@@ -5,11 +5,13 @@ function login() {
         "id": id.value,
         "pw": pw.value // 8426753190
     };
-    axios.post("/only_header.php", userdata)
-    .then((user) => {
-        console.log(user.data.access_token);
+    axios.post("http://10.156.147.149:1219", userdata)
+    .then(() => { // .then(user)
+        // console.log(user.data.access_token);
         alert('로그인 성공');
-        // location.href = '/';
+        location.href = "/";
+        document.getElementById('header').addEventListener('load', 
+        );
         // var cat = localStorage.setItem("id", "sook7836")
     })
     .catch(() => {

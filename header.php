@@ -11,8 +11,24 @@
 </head>
 </body>
     <div id="header">
+		<div id="innerDate"></div>
 		<?php
 		include("only_header.php");
 		?>
 		<div id="header_text"><a href="/"><?= $title ?></a></div>
 	</div>
+	<script>
+		function autoRefresh_sample_div() {
+			var currentLocation = window.location;
+			$("#header").load(currentLocation + ' #header');
+
+			let now = new Date();
+
+
+
+			// document.getElementById('innerDate').innerHTML = "Hello";
+		}
+		setInterval(() => {
+			autoRefresh_sample_div();
+		}, 1000);
+	</script>
