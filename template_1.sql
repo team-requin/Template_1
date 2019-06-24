@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 호스트: localhost
--- 처리한 시간: 19-06-20 08:43 
+-- 처리한 시간: 19-06-24 16:35 
 -- 서버 버전: 5.1.41
 -- PHP 버전: 5.2.12
 
@@ -26,18 +26,39 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 
 CREATE TABLE IF NOT EXISTS `board` (
-  `board_id` varchar(20) NOT NULL,
-  `board_name` varchar(20) NOT NULL,
+  `board` varchar(20) NOT NULL,
   `board_per` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`board_id`)
+  PRIMARY KEY (`board`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- 테이블의 덤프 데이터 `board`
 --
 
-INSERT INTO `board` (`board_id`, `board_name`, `board_per`) VALUES
-('notice', '공지사항', 0);
+INSERT INTO `board` (`board`, `board_per`) VALUES
+('notice', 0);
+
+-- --------------------------------------------------------
+
+--
+-- 테이블 구조 `board_notice`
+--
+
+CREATE TABLE IF NOT EXISTS `board_notice` (
+  `bo_id` int(11) NOT NULL,
+  `bo_title` varchar(40) NOT NULL,
+  `bo_writer` varchar(30) NOT NULL,
+  `bo_date` varchar(40) NOT NULL,
+  `bo_text` text NOT NULL,
+  PRIMARY KEY (`bo_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- 테이블의 덤프 데이터 `board_notice`
+--
+
+INSERT INTO `board_notice` (`bo_id`, `bo_title`, `bo_writer`, `bo_date`, `bo_text`) VALUES
+(1, '첫번째 글', '임용성', '2019-06-23 16:01:22', '헤헤헤헤');
 
 -- --------------------------------------------------------
 
