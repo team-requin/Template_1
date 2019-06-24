@@ -3,6 +3,18 @@ $skin_dir = "../skin";
 $img_dir = "../imgs";
 $title = strtoupper($_GET['board']);
 include('header.php');
+
+if(!login_check()) {
+	exit();
+}
+
+$title = $_POST['title'];
+$text = $_POST['text'];
+$link = $_POST['title'];
+$secret = $_POST['hide'];
+if($title != null && $text != null) {
+	
+}
 ?>
     <div id="board_write">
         <form id="board_frame">
@@ -10,12 +22,12 @@ include('header.php');
                 <tbody id="board_write_tbody">
                     <tr>
                         <th>제목</th>
-                        <td><input id="board_title"type="text" placeholder="제목을 입력해주세요"></td>
+                        <td><input id="board_title" name="title" type="text" placeholder="제목을 입력해주세요"></td>
                     </tr>
                     <tr>
                         <th>내용</th>
                         <td>
-                            <textarea name="ir1" id="ir1" class="nse_content"></textarea>
+                            <textarea name="text" id="ir1" class="nse_content"></textarea>
 							<script type="text/javascript">
 							var oEditors = [];
 							nhn.husky.EZCreator.createInIFrame({
@@ -38,13 +50,13 @@ include('header.php');
                     <tr>
                         <th>링크</th>
                         <td>
-                            <input id="board_link"type="text" placeholder="링크를 입력해주세요">
+                            <input id="board_link" name="link" type="text" placeholder="링크를 입력해주세요">
                         </td>
                     </tr>
                     <tr>
                         <th>옵션</th>
                         <td>
-                            <input id="board_check" type="checkbox" value="secret">
+                            <input id="board_check" type="checkbox" name="hide" value="secret">
                             <label for="board_check">비공개</label>                        
                         </td>
                     </tr>

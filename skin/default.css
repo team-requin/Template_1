@@ -289,7 +289,7 @@ li, ul, ol {
 	height: 10%;
 }
 #board_write_tbody tr:first-child input {
-	margin-left: 5%;
+	margin-left: 10px;
 	font-size: 1rem;
 	padding: 10px;
 }
@@ -309,7 +309,7 @@ li, ul, ol {
 	border: 1px solid #cecece;
 }
 #board_write_tbody tr:nth-child(3) td > input {
-	margin-left: 5%;
+	margin-left: 10px;
 	font-size: 1rem;
 	padding: 8px 10px;
 }
@@ -317,7 +317,7 @@ li, ul, ol {
 	height: 10%;
 }
 #board_write_tbody tr:last-child input {
-	margin-left: 5%;
+	margin-left:10px;
 	padding: 10px;
 }
 #board_write_tbody tr th{
