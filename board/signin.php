@@ -1,8 +1,6 @@
 <?php
+$title = "Login";
 include("header.php");
-
-$id = $_POST['id'];
-$pw = $_POST['pw'];
 ?>  
     <div id="siin_container">
         <form id="siin_frm" name="siin_frm" method="POST" autocomplete="off">

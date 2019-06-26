@@ -19,10 +19,10 @@ function login() {
         "id": id.value,
         "pw": pw.value // 8426753190
     };
-    axios.post("/board/signin.php", userdata)
-    .then(() => { // .then(user)
+    axios.post("signin_check.php", userdata)
+    .then((id) => { // .then(user)
         // console.log(user.data.access_token);
-        alert('로그인 성공');
+        alert('로그인 성공'+id.data);
         // var cat = localStorage.setItem("id", "sook7836")
     })
     .catch(() => {
