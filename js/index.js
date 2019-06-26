@@ -2,17 +2,27 @@ function login() {
 	
     var id = document.getElementById("id");
     var pw = document.getElementById("pw");
-    
+
+    // if (id.value.replace(/(\s*)/g, "") == ""){
+    //     alert("아이디를 입력하세요.");
+    //     id.focus();
+    //     return;
+    // }
+    // if (pw.value.replace(/(\s*)/g, "") == "") {
+    //     alert("비밀번호를 입력하세요.");
+    //     pw.focus();
+    //     return;
+    // }
+
+
 	var userdata = {
         "id": id.value,
         "pw": pw.value // 8426753190
     };
-    axios.post("http://10.156.147.149:1219", userdata)
+    axios.post("/board/signin.php", userdata)
     .then(() => { // .then(user)
         // console.log(user.data.access_token);
         alert('로그인 성공');
-        location.href = "/";
-        document.getElementById('header').addEventListener('load', );
         // var cat = localStorage.setItem("id", "sook7836")
     })
     .catch(() => {
