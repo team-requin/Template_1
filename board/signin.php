@@ -1,5 +1,8 @@
 <?php
 include("header.php");
+
+$id = $_POST['id'];
+$pw = $_POST['pw'];
 ?>  
     <div id="siin_container">
         <form id="siin_frm" name="siin_frm" method="POST" autocomplete="off">
@@ -20,12 +23,6 @@ include("header.php");
                         </span>
                     </div>
                 </div>
-                <!-- <script>
-                    axios.get("http://10.156.147.139")
-                    .then(res => {
-                        console.log(res.data)
-                    })
-                </script> -->
                 <input id="siin_btn" type="button" onclick="login()" title="로그인" value="로그인">
             </fieldset>
             <div id="gosignup">
